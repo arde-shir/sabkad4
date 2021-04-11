@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/bootstrap-rtl.css" />
+    <title>
+        <%= pageTitle %>
+    </title>
+</head>
+
+<body class="rtl">
+
+        
+    <div>
+        <%- include ('./includes/header.ejs') %>
+    </div>
+
+
+    <div class="container-fluid">
+
+        <div class=" row addForm">
+            <%- include ('./includes/getEach_add_new.ejs') %>
+        </div>
+
+
+        <div class="row ">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="thead" scope="col">کد مقدار ثابت</th>
+                        <th class="thead" scope="col"></th>
+                        <th class="thead" scope="col">عنوان مقدار ثابت</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <% if( datas.length> 0 ) {%> <% datas.forEach(function(data) { %>
+
+                            <tr>
+                                <td class="trow">
+                                    <%= data.subcode %>
+                                </td>
+                                <td>
+                                    <a href="/deleteEach/<%= data.id %>/" class="btn btn-danger">حذف</a>
+                                    <button type="submit" class="btn btn-warning"
+                                        formaction="/editEach/<%= data.id %>/" form="setForm">ویرایش
+                                    </button>
+                                </td>
+                                <td class="trow">
+                                    <%= data.subtitle %>
+                                </td>
+                            </tr>
+
+                        <% }) %>
+                    <% } %>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <script src="/js/jquery.slim.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>

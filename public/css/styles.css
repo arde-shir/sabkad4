@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "BYekan";
+    src: url("../fonts/BYekan-webfont.eot") format("eot"),
+        url("../fonts/BYekan-webfont.woff") format("woff"),
+        url("../fonts/BYekan-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: "BYekan" !important;
+    overflow-x: hidden;
+    background-color: #f5f5f5 !important;
+}
+
+
+.table {
+    width: 100%;
+    max-width: 50%;
+    padding: 15px;
+    margin: 40px  auto 0;
+}
+.table .thead , .table .trow{
+    text-align: center;
+}
+.addForm{
+    padding-top: 20px;
+    margin-top: 2rem;
+}
+.form-signin {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    margin: auto;
+}
+.form-signin h1{
+    text-align: center;
+}
+.form-signin button{
+    margin: 10px auto;
+    width: 80%;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin .form-control input{
+    padding: 10px;
+}
+
+/* .searchTitle{
+    text-align: center;
+    margin: 20px;
+    padding: 30px;
+} */
+.search .form-outline {
+    margin: 40px 0 0 0;
+    text-align: center;
+    width: 35rem ;
+}
+.search .form-outline input{
+    padding: 20px;
+    margin: 20px 0;
+}
+.search {
+    text-align: center;
+    margin: 50px auto;
+    align-items: center;
+    right: 32%;
+}
+.srch{
+    background-color: #fff !important;
+    padding-bottom: 5px;
+}
+.masthead {
+    padding: 40px;
+    background-color: #3d3d3d;
+  }
+  
+  .masthead-brand {
+    margin-bottom: 0;
+    color: #f5f5f5;
+  }
+  
+  .nav-masthead .nav-link {
+    padding: 0 20px;
+    color: rgba(255, 255, 255, .5);
+    border-bottom: 1px solid transparent;
+  }
+  
+  .nav-masthead .nav-link:hover,
+  .nav-masthead .nav-link:focus {
+    border-bottom-color: rgba(255, 255, 255, .25);
+  }
+  
+  .nav-masthead .nav-link + .nav-link {
+    margin-left: 1rem;
+  }
+  
+  .nav-masthead .active {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+  
+  @media (min-width: 48em) {
+    .masthead-brand {
+      float: left;
+    }
+    .nav-masthead {
+      float: right;
+    }
+  }
+  

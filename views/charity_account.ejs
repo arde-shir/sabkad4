@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/bootstrap-rtl.css" />
+    <title>
+        <%= pageTitle %>
+    </title>
+</head>
+
+<body class="rtl">
+
+    <div>
+        <%- include ('./includes/header.ejs') %>
+    </div>
+
+
+    <div class="container-fluid">
+
+        <div class=" row addForm">
+            <%- include ('./includes/add_new_account.ejs') %>
+        </div>
+
+        <div class="row ">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="thead" scope="col">نام شعبه</th>
+                        <th class="thead" scope="col">نام صاحب حساب</th>
+                        <th class="thead" scope="col">شماره کارت</th>
+                        <th class="thead" scope="col">شماره حساب</th>
+                        <th class="thead" scope="col">نام حساب</th>
+                        <th class="thead" scope="col"> </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <% if( datas.length> 0 ) {%> <% datas.forEach(function(data) { %>
+
+                            <tr>
+                                <td class="trow">
+                                    <%= data.BranchName %>
+                                </td>
+                                <td class="trow">
+                                    <%= data.OwnerName %>
+                                </td>
+                                <td class="trow">
+                                    <%= data.CardNumber %>
+                                </td>
+                                <td class="trow">
+                                    <%= data.AccountNumber %>
+                                </td>
+                                <td class="trow">
+                                    <%= data.AccountName %>
+                                </td>
+                                <td>
+                                    <a href="/charity_account/delete/<%= data.id %>/" class="btn btn-danger">حذف</a>
+                                    <button type="submit" class="btn btn-warning"
+                                        formaction="/charity_account/edit/<%= data.id %>/" form="setForm">ویرایش</button>
+                                    <a href="/charity_account/geteach/<%= data.id %>/" class="btn btn-primary invisible ">مشاهده</a>
+                                </td>
+                            </tr>
+
+                            <% }) %>
+                                <% } %>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <script src="/js/jquery.slim.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>

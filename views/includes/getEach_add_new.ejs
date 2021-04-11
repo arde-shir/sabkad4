@@ -1,0 +1,31 @@
+<form class="form-signin" method="POST" id="setForm">
+    <h1 class="h3 mb-3 font-weight-normal">ایجاد کردن مقدار </h1>
+    
+    <% if(typeof errors != 'undefined') {%> 
+        <% errors.forEach(function(error) { %>
+            <div class="alert alert-danger alert-dismissible fade show">
+                <%= error.message %>
+            </div>
+        <% }) %> 
+    <% } %>
+
+    <input
+        type="text"
+        id="inputCode"
+        name = "subcode"
+        class="form-control mb-2"
+        placeholder="کد شناسه "
+        required
+    />
+    <input
+        type="text"
+        id="inputTitle"
+        name = "subtitle"
+        class="form-control"
+        placeholder="عنوان شناسه"
+        required
+    />
+    
+    <button class="btn btn-lg btn-success btn-block" type="submit" formaction="/geteach/addNew/">ثبت</button>
+
+</form>

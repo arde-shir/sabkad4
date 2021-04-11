@@ -1,0 +1,18 @@
+<form class="form-signin" method="POST" id="setForm">
+    <h1 class="h3 mb-3 font-weight-normal">ایجاد کردن حساب </h1>
+    <div class="row">
+        <input type="text" name="BranchName" class="col-md-6 form-control mb-2" placeholder="نام شعبه" required />
+        <input type="text" name="OwnerName" class="col-md-6 form-control mb-2" placeholder="نام صاحب حساب" required />
+    </div>
+    <div class="row">
+        <input type="text" name="CardNumber" class="col-md-6 form-control mb-2" placeholder="شماره کارت" required />
+        <input type="text" name="AccountNumber" class="col-md-6 form-control mb-2" placeholder="شماره حساب" required />
+    </div>
+    <div class="row">
+        <input type="text" name="AccountName" class="col-md-12 form-control mb-2" placeholder="نام حساب" required />
+    </div>
+   
+    
+    <button class="btn btn-lg btn-success btn-block" type="submit" formaction="/charity_account/addNew/">ثبت</button>
+
+</form>
